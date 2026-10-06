@@ -1,0 +1,50 @@
+<!doctype html>
+<!--
+  CMS School Operations launcher.
+
+  The portal runs on Apps Script, which cannot put an apple-touch-icon on its
+  page, so an iPhone home-screen shortcut to it shows a screenshot instead of
+  the crest. This page exists only to carry the icons: added to the home screen
+  from here, the shortcut shows the crest, and opening it goes straight on to
+  the portal. Nothing is signed in, stored or sent here.
+
+  Source: launcher/ in the cms-operations-v3 repository. Published by
+  scripts/publish-launcher.sh; edit there, not in the published copy.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>CMS School Operations</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CMS">
+<meta name="theme-color" content="#16324f">
+<link rel="stylesheet" href="style.css">
+<script src="launch.js" defer></script>
+</head>
+<body>
+<main class="card">
+  <img class="crest" src="icon-192.png" alt="Central Montessori School" width="120" height="120">
+  <h1>CMS School Operations</h1>
+  <p class="muted">Central Montessori School staff portal</p>
+
+  <!-- The one place the portal's address is written. launch.js reads it from here. -->
+  <a id="open" class="button" href="https://script.google.com/macros/s/AKfycbwF8Wvpto8F0-JUz8o-wGgygLHxYSzrLArisIFUCFRXO7zgxBzTJeQOQg4CCHBBUIL7iQ/exec">Open the portal</a>
+  <p class="launching muted">Opening the portal…</p>
+
+  <section class="install">
+    <h2>Put it on your home screen</h2>
+    <p><strong>iPhone or iPad:</strong> tap Share, then <em>Add to Home Screen</em>.</p>
+    <p><strong>Android:</strong> tap ⋮, then <em>Add to Home screen</em> or <em>Install app</em>.</p>
+    <p class="muted">From then on, open it from the home-screen icon. It goes straight to the sign-in page.</p>
+  </section>
+</main>
+</body>
+</html>
